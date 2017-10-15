@@ -1,0 +1,16 @@
+# Site settings
+title: 'Bach Do' # Your Title
+tagline: 'A personal blog' # A brief tagline for your site
+sidebar_image: /images/lewis.jpg
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+baseurl: /bach_do #the subpath of your site, e.g. /blog/
+plugins:
+- jekyll-paginate
+
+paginate: 4
+paginate_path: "/page:num/"
+
+
