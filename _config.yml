@@ -12,5 +12,3 @@ plugins:
 
 paginate: 4
 paginate_path: "/page:num/"
-
-
