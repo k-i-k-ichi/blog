@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Bach Do's Blog
+pagination:
+    enabled: true
 ---
 <header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
   <div class="container">
@@ -22,7 +24,7 @@ title: Bach Do's Blog
         <li>
           <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
           <span class="meta">
-            {{ post.date | date_to_string }}
+            {{ post.date | date: "%b %-d, %Y" }}
           </span>
           {{ post.excerpt }}
         </li>

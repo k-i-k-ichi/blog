@@ -4,7 +4,8 @@ CUR_DIR=$(pwd)
 DOCKER_COMMAND ?=$(shell type -p podman 2>&1 >/dev/null && echo podman || echo docker)
 
 DOCKER_IMAGE=blog
-DOCKER_OPTS= -v $(shell pwd):/blog:Z
+DOCKER_OPTS=-v $(shell pwd):/blog:Z \
+			--network=host
 
 docker:
 	echo "build docker"
@@ -21,4 +22,4 @@ build:
 # Q: Why not use run command in docker-compose ?
 # A: It's not even available for podman
 run_test:
-	${DOCKER_COMMAND} run --rm -it ${DOCKER_IMAGE} /bin/bash
+	${DOCKER_COMMAND} run ${DOCKER_OPTS} --rm -it ${DOCKER_IMAGE} /bin/bash

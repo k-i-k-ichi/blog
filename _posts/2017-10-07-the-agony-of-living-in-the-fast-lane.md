@@ -2,7 +2,7 @@
 layout: post
 title: "The agony of living in the fast lane"
 date: 2017-10-07 12:00:00
-categories: jekyll
+categories: misc
 featured_image: /images/cover.jpg
 ---
 

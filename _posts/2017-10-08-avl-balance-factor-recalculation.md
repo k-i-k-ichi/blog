@@ -2,7 +2,7 @@
 layout: post
 title: "Calculate balance factor when rotating AVL tree node"
 date: 2017-10-08 12:00:00
-categories: algorithms
+categories: algo
 featured_image: /images/lewis.jpg
 ---
 

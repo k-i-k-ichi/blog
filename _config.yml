@@ -1,14 +1,26 @@
 # Site settings
-title: 'Bach Do' # Your Title
+title: 'Bach' # Your Title
 tagline: 'A personal blog' # A brief tagline for your site
 sidebar_image: /images/lewis.jpg
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
-baseurl: /bach_do #the subpath of your site, e.g. /blog/
+baseurl: /blog #the subpath of your site, e.g. /blog/
 plugins:
-- jekyll-paginate
+- jekyll-paginate-v2
 
-paginate: 4
-paginate_path: "/page:num/"
+# NOTE: turn off paginate v1 config explicitly
+paginate: null
+paginate_path: null
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  offset: 2
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

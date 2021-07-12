@@ -5,17 +5,8 @@ RUN apk add --no-cache build-base gcc bash cmake git
 
 # create directory to mount site from host
 RUN mkdir -p /blog
-VOLUME . /blog
 
-# ENTRYPOINT [ "jekyll" ]
+RUN gem install bundler -v "2.2.23"
 
-# CMD [ "--help" ]
-
-
-# COPY docker-entrypoint.sh /usr/local/bin/
-
-# # on every container start, check if Gemfile exists and warn if it's missing
-# ENTRYPOINT [ "docker-entrypoint.sh" ]
-
-# CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
-# CMD ["top"]
+# TODO: mount Gemfile into image and run bundle install on image creation
+# make script to run build static and exit
